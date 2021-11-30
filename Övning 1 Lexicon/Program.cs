@@ -16,15 +16,14 @@ namespace Övning_1_Lexicon
             Console.WriteLine("Var vänlig lägg till personal, separera förnamn, efternamn och årslön med mellanslag.");
             Console.WriteLine("Avsluta med att skriva \"skriv ut\"");
             bool loop = true;
-            string input;
-            string[] command;
+            
             while (loop)
             {
-                input = Console.ReadLine();
-                command = input.Split(' ');
+                string input = Console.ReadLine();
+                string[] command = input.Split(' ');
                 if(command.Length == 2) //Kolla om det är "skriv ut", annars skräp
                 {
-                    if(command[0].ToLower() == "skriv" && command[1].ToLower() == "ut") //Rätt, vi skriver personal och avslutar
+                    if(input.ToUpper() == "SKRIV UT") //Rätt, vi skriver personal och avslutar
                     {
                         loop = false;
                         Personal.SkrivUtPersonal();
