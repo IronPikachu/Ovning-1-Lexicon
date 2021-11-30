@@ -2,7 +2,7 @@
  *          En klass, som heter Personal eller liknande
  * Uppgift 2: Vilka attribut och metoder bör ingå i klassen?
  *          Attribut: namn(för- och efternamn separat), lön (per år), register (Personal[])
- *          Metoder: skriv ut (allas) namn och lön, lägg till personal
+ *          Metoder: skriv ut (allas) namn och lön, lägg till personal i register
  * Uppgift 3: Skriv programmet
  */
 using System;
