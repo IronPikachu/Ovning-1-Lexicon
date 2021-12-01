@@ -38,7 +38,7 @@ namespace Övning_1_Lexicon
                     if(int.TryParse(command[2], out int salary)) //Kolla om lönen är ett tal
                     {
                         //Lyckat! Vi kan lägga in en personal
-                        _ = new Personal(command[0], command[1], salary); //VS visade mig _
+                        Personal.AddPersonal(new Personal(command[0], command[1], salary));
                     }
                     else //Lönen var inget tal
                     {

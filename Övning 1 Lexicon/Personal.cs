@@ -16,20 +16,24 @@ namespace Övning_1_Lexicon
             fNamn = f;
             eNamn = e;
             pengar = p;
-            this.AddPersonal();
         }
 
-        public void AddPersonal()
+        public static void AddPersonal(Personal p)
         {
-            Register.Add(this);
+            Register.Add(p);
         }
 
         public static void SkrivUtPersonal()
         {
-            for(int i = 0; i < Register.Count; i++)
+            foreach(Personal p in Register)
             {
-                Console.WriteLine($"Namn: {Register[i].fNamn} {Register[i].eNamn} med årsinkomst på {Register[i].pengar} svenska riksdaler");
+                Console.WriteLine(p);
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Namn: {fNamn} {eNamn}; årslön: {pengar}";
         }
     }
 }
